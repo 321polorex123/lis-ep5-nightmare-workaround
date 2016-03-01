@@ -1,0 +1,81 @@
+﻿<Window x:Class="LifeIsStrangeSaveEditor.Ep5Fix.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LifeIsStrangeSaveEditor.Ep5Fix"
+        mc:Ignorable="d"
+        Title="About" Height="500" Width="600" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Icon="Resources/Images/icon.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Header="Program Details" Margin="10,10,5,5">
+            <TextBlock Margin="5,5,5,5" TextWrapping="Wrap">
+                Life is Strange Episode 5 Nightmare Fix<LineBreak />
+                Version 0.1
+            </TextBlock>
+        </GroupBox>
+        <GroupBox Grid.Column="0" Grid.Row="1" Header="Credits" Margin="10,5,5,5">
+            <TextBlock Margin="5,5,5,5" TextWrapping="Wrap">
+                <Bold>Safe Game Editor</Bold><LineBreak />
+                This program bases on the LiS safe game editor made by Vakhtin Andrey licenesed under GPL 2.0.<LineBreak />
+                <Hyperlink NavigateUri="https://github.com/VakhtinAndrey/lis-save-editor" RequestNavigate="Hyperlink_RequestNavigate">
+                    Github Repository<LineBreak />
+                </Hyperlink>
+                <LineBreak />
+                <Bold>Icon</Bold><LineBreak />
+                This programs uses icons from the Icomoon Icon Pack Free Version licenesed under GPL / CC BY 3.0.<LineBreak />
+                <Hyperlink NavigateUri="https://icomoon.io/" RequestNavigate="Hyperlink_RequestNavigate">
+                    Icomoon Homepage
+                </Hyperlink>
+                <LineBreak />
+                <Hyperlink NavigateUri="http://www.gnu.org/licenses/gpl.html" RequestNavigate="Hyperlink_RequestNavigate">
+                    GPL
+                </Hyperlink>
+                <LineBreak />
+                <Hyperlink NavigateUri="http://creativecommons.org/licenses/by/3.0/" RequestNavigate="Hyperlink_RequestNavigate">
+                    CC BY 3.0
+                </Hyperlink>
+            </TextBlock>
+        </GroupBox>
+        <GroupBox Grid.Column="1" Grid.Row="1" Header="Information" Margin="5,5,10,5">
+            <TextBlock Margin="5,5,5,5" TextWrapping="Wrap">
+                <Bold>Disclaimer</Bold><LineBreak />
+                The author(s) of this program is/are not responsible for any damage that my occur using this program.<LineBreak />
+                <LineBreak />
+                <Bold>Author</Bold><LineBreak />
+                <Hyperlink NavigateUri="https://github.com/321polorex123" RequestNavigate="Hyperlink_RequestNavigate">
+                    321polorex123<LineBreak />
+                </Hyperlink>
+                <LineBreak />
+                <Bold>Acknowledgements</Bold><LineBreak />
+                Big thanks to Vakhtin Andrey for letting me use his safe game editor.<LineBreak />
+                <Hyperlink NavigateUri="https://github.com/VakhtinAndrey" RequestNavigate="Hyperlink_RequestNavigate">
+                    Vakhtin Andrey<LineBreak />
+                </Hyperlink>
+                <LineBreak />
+                <Bold>License</Bold><LineBreak />
+                This programs is licensed under the GPL 2.0.<LineBreak />
+                <Hyperlink NavigateUri="http://www.gnu.org/licenses/old-licenses/gpl-2.0.de.html" RequestNavigate="Hyperlink_RequestNavigate">
+                    GPL 2.0<LineBreak />
+                </Hyperlink>
+                <LineBreak />
+                <Hyperlink NavigateUri="https://github.com/321polorex123/lis-ep5-nightmare-workaround" RequestNavigate="Hyperlink_RequestNavigate">
+                    Github Repository
+                </Hyperlink>
+            </TextBlock>
+        </GroupBox>
+        <Grid Grid.Column="1" Grid.Row="2">
+            <Button Content="About Safe Game Editor" VerticalAlignment="Center" HorizontalAlignment="Center" Width="175"
+                    Click="AboutSGEButton_Click" />
+        </Grid>
+    </Grid>
+</Window>

@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeIsStrangeSaveEditor.Win", "LifeIsStrangeSaveEditor.Win\LifeIsStrangeSaveEditor.Win.csproj", "{8E39BDD6-980E-4FA9-964E-C18235829C34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeIsStrangeSaveEditor.Ep5Fix", "LifeIsStrangeSaveEditor.Ep5Fix\LifeIsStrangeSaveEditor.Ep5Fix.csproj", "{11ADB703-7B45-47B5-8ECC-719A9EE1133F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{8E39BDD6-980E-4FA9-964E-C18235829C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E39BDD6-980E-4FA9-964E-C18235829C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E39BDD6-980E-4FA9-964E-C18235829C34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11ADB703-7B45-47B5-8ECC-719A9EE1133F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11ADB703-7B45-47B5-8ECC-719A9EE1133F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11ADB703-7B45-47B5-8ECC-719A9EE1133F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11ADB703-7B45-47B5-8ECC-719A9EE1133F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

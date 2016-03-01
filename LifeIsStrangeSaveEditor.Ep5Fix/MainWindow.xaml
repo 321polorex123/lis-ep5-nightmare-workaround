@@ -1,0 +1,71 @@
+﻿<Window x:Class="LifeIsStrangeSaveEditor.Ep5Fix.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LifeIsStrangeSaveEditor.Ep5Fix"
+        mc:Ignorable="d"
+        Title="Life is Strange Episode 5 Nightmare Fix" Height="400" Width="600" Topmost="True" ShowInTaskbar="True" WindowStartupLocation="CenterScreen"
+        Icon="Resources/Images/icon.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="50" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Content="Step 1" IsEnabled="{Binding FirstStepActive}"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Label Grid.Column="0" Grid.Row="1" Content="Step 2" IsEnabled="{Binding SecondStepActive}"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Label Grid.Column="0" Grid.Row="2" Content="Step 3" IsEnabled="{Binding ThirdStepActive}"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Grid Grid.Column="1" Grid.Row="0" IsEnabled="{Binding FirstStepActive}">
+                <Label VerticalAlignment="Center" HorizontalAlignment="Left">
+                    Choose a Savegame
+                </Label>
+                <ComboBox VerticalAlignment="Center" HorizontalAlignment="Right" ItemsSource="{Binding AvailableSavegames}"
+                    SelectedItem="{Binding SelectedSafegame}" SelectionChanged="SafegamesComboBox_SelectionChanged" />
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="1" IsEnabled="{Binding SecondStepActive}">
+                <Label VerticalAlignment="Center" HorizontalAlignment="Left">
+                    Backup Savegame
+                </Label>
+                <Button Content="Backup" HorizontalAlignment="Right" VerticalAlignment="Center" Width="75"
+                    Click="BackupButton_Click" />
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="2" IsEnabled="{Binding ThirdStepActive}">
+                <Label VerticalAlignment="Center" HorizontalAlignment="Left">
+                    Patch Safegame
+                </Label>
+                <Button Content="Patch" HorizontalAlignment="Right" VerticalAlignment="Center" Width="75" Click="PatchButton_Click" />
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="3" IsEnabled="{Binding FourthStepActive}">
+                <Button Content="Start Game" HorizontalAlignment="Right" VerticalAlignment="Center" Width="75" Click="StartGameButton_Click" />
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="4" IsEnabled="{Binding FirstStepActive}">
+                <Button Content="Manage Backups" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="100" Click="BckManagerButton_Click" />
+            </Grid>
+            <Label Grid.Column="2" Grid.Row="0" Content="{Binding FirstStepSymbol}" Foreground="{Binding FirstStepColor}" FontFamily="Wingdings"
+                   FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Label Grid.Column="2" Grid.Row="1" Content="{Binding SecondStepSymbol}" Foreground="{Binding SecondStepColor}" FontFamily="Wingdings"
+                   FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Label Grid.Column="2" Grid.Row="2" Content="{Binding ThirdStepSymbol}" Foreground="{Binding ThirdStepColor}" FontFamily="Wingdings"
+                   FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <Button Content="About" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Width="75" Click="AboutButton_Click" />
+        </Grid>
+    </Grid>
+</Window>

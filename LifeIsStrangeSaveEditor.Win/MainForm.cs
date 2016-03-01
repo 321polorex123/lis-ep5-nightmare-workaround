@@ -399,7 +399,7 @@ namespace LifeIsStrangeSaveEditor.Win
             return saveData;
         }
 
-        private void LoadFile()
+        public bool LoadFile()
         {
             Cursor = Cursors.WaitCursor;
 
@@ -414,7 +414,7 @@ namespace LifeIsStrangeSaveEditor.Win
             {
                 MessageBox.Show("Error while reading file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Cursor = Cursors.Default;
-                return;
+                return false;
             }
 
             tcSaveData.SuspendLayout();
@@ -786,6 +786,8 @@ namespace LifeIsStrangeSaveEditor.Win
             }
 
             tcSaveData.ResumeLayout(true);
+
+            return true;
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
@@ -798,13 +800,13 @@ namespace LifeIsStrangeSaveEditor.Win
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        public void btnSave_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(SaveFilePath)) return;
+            //if (string.IsNullOrEmpty(SaveFilePath)) return;
 
-            if (MessageBox.Show(string.Format("Overwrite file?{0}{1}", Environment.NewLine, SaveFilePath), "",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
-                return;
+            //if (MessageBox.Show(string.Format("Overwrite file?{0}{1}", Environment.NewLine, SaveFilePath), "",
+            //        MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            //    return;
 
             Cursor = Cursors.WaitCursor;
 
