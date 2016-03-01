@@ -40,7 +40,7 @@ namespace LifeIsStrangeSaveEditor.Ep5Fix
             set
             {
                 availableSavegames = value;
-                OnPropertyChanged();
+                OnPropertyChanged("AvailableSavegames");
             }
         }
         private string selectedSafegame = "";
@@ -53,7 +53,7 @@ namespace LifeIsStrangeSaveEditor.Ep5Fix
             set
             {
                 selectedSafegame = value;
-                OnPropertyChanged();
+                OnPropertyChanged("SelectedSafegame");
             }
         }
         private bool firstStepActive = false;
@@ -213,16 +213,8 @@ namespace LifeIsStrangeSaveEditor.Ep5Fix
             new AboutWindow().ShowDialog();
         }
 
-        private void OnPropertyChanged(string name = "")
+        private void OnPropertyChanged(string name)
         {
-            if (string.IsNullOrEmpty(name))
-            {
-                StackFrame frame = new StackFrame(1);
-                var method = frame.GetMethod();
-                var type = method.DeclaringType;
-                name = method.Name.Split('_')[1];
-            }
-
             if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
