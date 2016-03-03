@@ -1,4 +1,4 @@
-#Life is Strange save editor
+#Life is Strange Episode 5 Nightmare Bug Workaround
 
 ##Disclaimer
 I'm not responsible for any damage that may occur when using this tool.
