@@ -35,17 +35,17 @@ namespace LifeIsStrangeSaveEditor.Ep5Fix
                 OnPropertyChanged("AvailableSavegames");
             }
         }
-        private string selectedSafegame = "";
-        public string SelectedSafegame
+        private string selectedSavegame = "";
+        public string SelectedSavegame
         {
             get
             {
-                return selectedSafegame;
+                return selectedSavegame;
             }
             set
             {
-                selectedSafegame = value;
-                OnPropertyChanged("SelectedSafegame");
+                selectedSavegame = value;
+                OnPropertyChanged("SelectedSavegame");
             }
         }
 
@@ -97,11 +97,11 @@ namespace LifeIsStrangeSaveEditor.Ep5Fix
             }
             if (AvailableSavegames.Count > 0)
             {
-                SelectedSafegame = AvailableSavegames[0];
+                SelectedSavegame = AvailableSavegames[0];
             }
 
             AvailableBackups.Clear();
-            foreach (var slot in BackupManager.GetBackupedSafegameSlots())
+            foreach (var slot in BackupManager.GetBackupedSavegameSlots())
             {
                 AvailableBackups.Add(string.Format("Slot {0}", slot));
             }
@@ -113,11 +113,11 @@ namespace LifeIsStrangeSaveEditor.Ep5Fix
         
         private void BackupButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(SelectedSafegame))
+            if (!string.IsNullOrEmpty(SelectedSavegame))
             {
                 var nbr = -1;
 
-                if (int.TryParse(SelectedSafegame.Replace("Slot ", ""), out nbr))
+                if (int.TryParse(SelectedSavegame.Replace("Slot ", ""), out nbr))
                 {
                     BackupManager.BackupSlot(nbr);
                     ReloadSlots();

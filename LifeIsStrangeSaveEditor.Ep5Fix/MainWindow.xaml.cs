@@ -43,17 +43,17 @@ namespace LifeIsStrangeSaveEditor.Ep5Fix
                 OnPropertyChanged("AvailableSavegames");
             }
         }
-        private string selectedSafegame = "";
-        public string SelectedSafegame
+        private string selectedSavegame = "";
+        public string SelectedSavegame
         {
             get
             {
-                return selectedSafegame;
+                return selectedSavegame;
             }
             set
             {
-                selectedSafegame = value;
-                OnPropertyChanged("SelectedSafegame");
+                selectedSavegame = value;
+                OnPropertyChanged("SelectedSavegame");
             }
         }
         private bool firstStepActive = false;
@@ -163,16 +163,16 @@ namespace LifeIsStrangeSaveEditor.Ep5Fix
                 AvailableSavegames.Add("No slots found");
             }
 
-            SelectedSafegame = AvailableSavegames[0];
+            SelectedSavegame = AvailableSavegames[0];
         }
 
-        private void SafegamesComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void SavegamesComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (SelectedSafegame != AvailableSavegames[0])
+            if (SelectedSavegame != AvailableSavegames[0])
             {
                 var nbr = -1;
 
-                if (int.TryParse(SelectedSafegame.Replace("Slot ", ""), out nbr))
+                if (int.TryParse(SelectedSavegame.Replace("Slot ", ""), out nbr))
                 {
                     selectedSlot = nbr;
 
@@ -191,7 +191,7 @@ namespace LifeIsStrangeSaveEditor.Ep5Fix
 
         private void PatchButton_Click(object sender, RoutedEventArgs e)
         {
-            if (SafegamePatcher.PatchSafegame(selectedSlot))
+            if (SavegamePatcher.PatchSavegame(selectedSlot))
             {
                 SwitchStep(4);
             }

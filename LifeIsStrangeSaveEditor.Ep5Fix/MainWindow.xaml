@@ -36,7 +36,7 @@
                     Choose a Savegame
                 </Label>
                 <ComboBox VerticalAlignment="Center" HorizontalAlignment="Right" ItemsSource="{Binding AvailableSavegames}"
-                    SelectedItem="{Binding SelectedSafegame}" SelectionChanged="SafegamesComboBox_SelectionChanged" />
+                    SelectedItem="{Binding SelectedSavegame}" SelectionChanged="SavegamesComboBox_SelectionChanged" />
             </Grid>
             <Grid Grid.Column="1" Grid.Row="1" IsEnabled="{Binding SecondStepActive}">
                 <Label VerticalAlignment="Center" HorizontalAlignment="Left">
@@ -47,7 +47,7 @@
             </Grid>
             <Grid Grid.Column="1" Grid.Row="2" IsEnabled="{Binding ThirdStepActive}">
                 <Label VerticalAlignment="Center" HorizontalAlignment="Left">
-                    Patch Safegame
+                    Patch Savegame
                 </Label>
                 <Button Content="Patch" HorizontalAlignment="Right" VerticalAlignment="Center" Width="75" Click="PatchButton_Click" />
             </Grid>

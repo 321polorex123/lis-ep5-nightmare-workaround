@@ -20,13 +20,13 @@
         <GroupBox Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Header="Program Details" Margin="10,10,5,5">
             <TextBlock Margin="5,5,5,5" TextWrapping="Wrap">
                 Life is Strange Episode 5 Nightmare Fix<LineBreak />
-                Version 0.1
+                Version 0.2
             </TextBlock>
         </GroupBox>
         <GroupBox Grid.Column="0" Grid.Row="1" Header="Credits" Margin="10,5,5,5">
             <TextBlock Margin="5,5,5,5" TextWrapping="Wrap">
-                <Bold>Safe Game Editor</Bold><LineBreak />
-                This program bases on the LiS safe game editor made by Vakhtin Andrey licenesed under GPL 2.0.<LineBreak />
+                <Bold>Save Game Editor</Bold><LineBreak />
+                This program bases on the LiS save game editor made by Vakhtin Andrey licenesed under GPL 2.0.<LineBreak />
                 <Hyperlink NavigateUri="https://github.com/VakhtinAndrey/lis-save-editor" RequestNavigate="Hyperlink_RequestNavigate">
                     Github Repository<LineBreak />
                 </Hyperlink>
@@ -57,7 +57,7 @@
                 </Hyperlink>
                 <LineBreak />
                 <Bold>Acknowledgements</Bold><LineBreak />
-                Big thanks to Vakhtin Andrey for letting me use his safe game editor.<LineBreak />
+                Big thanks to Vakhtin Andrey for letting me use his save game editor.<LineBreak />
                 <Hyperlink NavigateUri="https://github.com/VakhtinAndrey" RequestNavigate="Hyperlink_RequestNavigate">
                     Vakhtin Andrey<LineBreak />
                 </Hyperlink>
@@ -74,7 +74,7 @@
             </TextBlock>
         </GroupBox>
         <Grid Grid.Column="1" Grid.Row="2">
-            <Button Content="About Safe Game Editor" VerticalAlignment="Center" HorizontalAlignment="Center" Width="175"
+            <Button Content="About Save Game Editor" VerticalAlignment="Center" HorizontalAlignment="Center" Width="175"
                     Click="AboutSGEButton_Click" />
         </Grid>
     </Grid>

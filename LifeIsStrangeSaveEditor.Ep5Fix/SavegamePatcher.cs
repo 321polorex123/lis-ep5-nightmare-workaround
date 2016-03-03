@@ -7,9 +7,9 @@ using System.Text;
 
 namespace LifeIsStrangeSaveEditor.Ep5Fix
 {
-    internal static class SafegamePatcher
+    internal static class SavegamePatcher
     {
-        public static bool PatchSafegame(int slot)
+        public static bool PatchSavegame(int slot)
         {
             var retVal = true;
             var file1 = Path.Combine(
@@ -24,7 +24,7 @@ namespace LifeIsStrangeSaveEditor.Ep5Fix
             if (File.Exists(file1) && File.Exists(file2))
             {
                 var msg = string.Format(
-                    "Do you want to patch safegame slot {0}?\n" +
+                    "Do you want to patch savegame slot {0}?\n" +
                     "This step cannot be undone!",
                     slot
                     );
@@ -36,7 +36,7 @@ namespace LifeIsStrangeSaveEditor.Ep5Fix
             }
             else
             {
-                MsgBox.ShowWarning("Cannot patch the safegame.\nSome files are missing.");
+                MsgBox.ShowWarning("Cannot patch the savegame.\nSome files are missing.");
                 retVal = false;
             }
 
@@ -104,7 +104,7 @@ namespace LifeIsStrangeSaveEditor.Ep5Fix
             BackupManager.RestoreSlot(slot, true);
 
             MsgBox.ShowWarning(
-                "An error occured while patching the safegame.\n" +
+                "An error occured while patching the savegame.\n" +
                 "The support file \"LiSPatcherError.txt\" has been created on the desktop, " +
                 "please post it in the Steam thread in order to help the error get fixed.\n" +
                 "Backup will be restored."

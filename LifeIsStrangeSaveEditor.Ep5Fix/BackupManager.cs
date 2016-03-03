@@ -18,7 +18,7 @@ namespace LifeIsStrangeSaveEditor.Ep5Fix
             }
         }
 
-        public static int[] GetBackupedSafegameSlots()
+        public static int[] GetBackupedSavegameSlots()
         {
             var slots = new List<int>();
             var files = Directory.EnumerateDirectories(BackupFolder, "Slot*");
@@ -124,7 +124,7 @@ namespace LifeIsStrangeSaveEditor.Ep5Fix
 
             if (!Directory.Exists(FileSystemOperations.SaveGameFolder))
             {
-                MsgBox.ShowWarning("Could not find the safegame folder!");
+                MsgBox.ShowWarning("Could not find the savegame folder!");
                 retVal = false;
             }
 
